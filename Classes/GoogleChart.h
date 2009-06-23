@@ -29,20 +29,20 @@
   NSMutableArray *colors;
 }
 
-@property (nonatomic, readonly, retain) NSString *apiUrl;
+@property (nonatomic, readonly, assign) NSString *apiUrl;
 @property (nonatomic, assign) int width;
 @property (nonatomic, assign) int height;
-@property (nonatomic, retain) NSString *type;
-@property (nonatomic, retain) NSMutableArray *data;
-@property (nonatomic, retain) NSString *dataEncoding;
+@property (nonatomic, assign) NSString *type;
+@property (nonatomic, assign) NSMutableArray *data;
+@property (nonatomic, assign) NSString *dataEncoding;
 @property (nonatomic, assign) float scaleFactor;
-@property (nonatomic, retain) NSMutableArray *labels;
-@property (nonatomic, retain) GoogleChartAxis *xAxis;
-@property (nonatomic, retain) GoogleChartAxis *yAxis;
-@property (nonatomic, retain) GoogleChartAxis *topAxis;
-@property (nonatomic, retain) GoogleChartAxis *rightAxis;
-@property (nonatomic, retain) GoogleChartLegend *legend;
-@property (nonatomic, retain) NSMutableArray *colors;
+@property (nonatomic, assign) NSMutableArray *labels;
+@property (nonatomic, assign) GoogleChartAxis *xAxis;
+@property (nonatomic, assign) GoogleChartAxis *yAxis;
+@property (nonatomic, assign) GoogleChartAxis *topAxis;
+@property (nonatomic, assign) GoogleChartAxis *rightAxis;
+@property (nonatomic, assign) GoogleChartLegend *legend;
+@property (nonatomic, assign) NSMutableArray *colors;
 
 + (NSString *)extendedEncodingFor:(int)value;
 + (NSString *)textEncodingFor:(int)value;

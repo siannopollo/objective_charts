@@ -11,7 +11,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {895, 456}}";
 			sepNavSelRange = "{197, 0}";
-			sepNavVisRange = "{37, 368}";
+			sepNavVisRange = "{3, 402}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* objective_charts */ = {
@@ -279,6 +279,11 @@
 		sourceDirectories = (
 		);
 	};
+	B88B46D30FF161D500E82996 /* Test-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 423}, {1137, 600}}";
+		};
+	};
 	B88B46D90FF161FD00E82996 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
@@ -318,5 +323,54 @@
 		rType = 0;
 		vrLen = 344;
 		vrLoc = 0;
+	};
+	B88B47030FF1633B00E82996 /* GoogleChartTest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {895, 3591}}";
+			sepNavSelRange = "{105, 23}";
+			sepNavVisRange = "{73, 469}";
+		};
+	};
+	B88B47060FF1635600E82996 /* GoogleChart.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {895, 1368}}";
+			sepNavSelRange = "{253, 327}";
+			sepNavVisRange = "{166, 516}";
+		};
+	};
+	B88B47070FF1635600E82996 /* GoogleChart.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {895, 4503}}";
+			sepNavSelRange = "{8497, 0}";
+			sepNavVisRange = "{8309, 421}";
+		};
+	};
+	B88B47080FF1635600E82996 /* GoogleChartAxis.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {895, 1007}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 452}";
+		};
+	};
+	B88B47090FF1635600E82996 /* GoogleChartAxis.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {895, 1691}}";
+			sepNavSelRange = "{848, 0}";
+			sepNavVisRange = "{540, 641}";
+		};
+	};
+	B88B470A0FF1635600E82996 /* GoogleChartLegend.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {895, 418}}";
+			sepNavSelRange = "{114, 0}";
+			sepNavVisRange = "{0, 405}";
+		};
+	};
+	B88B470B0FF1635600E82996 /* GoogleChartLegend.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {895, 950}}";
+			sepNavSelRange = "{594, 0}";
+			sepNavVisRange = "{215, 685}";
+		};
 	};
 }

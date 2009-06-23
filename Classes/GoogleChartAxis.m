@@ -30,6 +30,13 @@
   if ([labels count] > 0 || [range isValid]) return YES;
   else return NO;
 }
+
+- (void)dealloc {
+  [super dealloc];
+  [type release];
+  [labels release];
+  [range release];
+}
 @end
 
 //  The 4 different types of axes. You should never need to instantiate these since each GoogleChart object

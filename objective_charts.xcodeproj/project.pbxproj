@@ -195,7 +195,6 @@
 				B88B46CE0FF161D500E82996 /* Sources */,
 				B88B46CF0FF161D500E82996 /* Frameworks */,
 				B88B46D80FF161FA00E82996 /* ShellScript */,
-				B88B46DC0FF1623200E82996 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,19 +255,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = ./UnitTestingFramework/RunIPhoneUnitTest.sh;
-		};
-		B88B46DC0FF1623200E82996 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 

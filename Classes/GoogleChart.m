@@ -22,6 +22,8 @@
   int length = [characters length];
   unichar firstCharacter = [characters characterAtIndex:value/length];
   unichar secondCharacter = [characters characterAtIndex:value%length];
+  
+  [characters release];
   return [NSString stringWithFormat:@"%C%C", firstCharacter, secondCharacter];
 }
 
@@ -74,6 +76,8 @@
                @"pc", @"Concentric Pie",
                nil] objectForKey:[self type]];
   if (value == nil) value = @"";
+  
+  [value autorelease];
   return value;
 }
 
@@ -105,6 +109,7 @@
   result = [NSString stringWithFormat:@"%@%@", result, [dataSetStrings componentsJoinedByString:@"|"]];
   if ([result length] == 2) result = @"";
   
+  [dataSetStrings release]; [dataSet release]; [result autorelease];
   return result;
 }
 
@@ -143,7 +148,6 @@
       if ([axis.range isValid]) [rangeValues addObject:[axis.range formattedRange]];
     }
   }
-  
   if ([typeValues count] == 0) return @"";
   
   NSString *result = [typeValues componentsJoinedByString:@","];
@@ -153,6 +157,8 @@
   if ([rangeValues count] > 0) {
     result = [NSString stringWithFormat:@"%@&chxr=%@", result, [rangeValues componentsJoinedByString:@"|"]];
   }
+  
+  [typeValues release]; [labelValues release]; [rangeValues release]; [result autorelease];
   return result;
 }
 
@@ -175,6 +181,7 @@
     }
   }
   NSArray *sorted = [allValues sortedArrayUsingSelector:@selector(compare:)];
+  [allValues release];
   return [[sorted objectAtIndex:[sorted count] - 1] intValue];
 }
 
@@ -206,9 +213,23 @@
       [urlParameters addObject:[NSString stringWithFormat:@"%@=%@", parameter, value]];
     }
   }
-  [parameter release]; [value release];
+  NSString *components = [urlParameters componentsJoinedByString:@"&"];
   
-  return [NSString stringWithFormat:@"%@?%@", apiUrl, [urlParameters componentsJoinedByString:@"&"]];
+  [parameter release]; [value release]; [urlParameters release];
+  return [NSString stringWithFormat:@"%@?%@", apiUrl, components];
 }
 
+- (void)dealloc {
+  [super dealloc];
+  [apiUrl release];
+  [type release];
+  [data release];
+  [dataEncoding release];
+  [labels release];
+  [xAxis release];
+  [yAxis release];
+  [topAxis release];
+  [rightAxis release];
+  [legend release];
+}
 @end

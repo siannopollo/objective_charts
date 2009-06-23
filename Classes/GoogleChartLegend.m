@@ -38,7 +38,10 @@
                       nil] objectForKey:position];
   
   if (value == nil) return @"tv";
-  else return value;
+  else {
+    [value autorelease];
+    return value;
+  }
 }
 
 - (void)dealloc {

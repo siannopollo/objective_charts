@@ -34,10 +34,10 @@
 }
 
 - (void)testChartSize {
-  chart.width = 480;
-  chart.height = 320;
-  STAssertEqualObjects(@"480x320", [chart size], nil);
-  STAssertEqualObjects(@"http://chart.apis.google.com/chart?chs=480x320", [chart url], nil);
+  chart.width = 320;
+  chart.height = 480;
+  STAssertEqualObjects(@"320x480", [chart size], nil);
+  STAssertEqualObjects(@"http://chart.apis.google.com/chart?chs=320x480", [chart url], nil);
   
   chart.height = 0;
   STAssertEqualObjects(@"http://chart.apis.google.com/chart?", [chart url], nil);
@@ -139,8 +139,8 @@
 }
 
 - (void)testAllSupportedParameters {
-  chart.width = 480;
-  chart.height = 320;
+  chart.width = 320;
+  chart.height = 480;
   chart.type = @"Line";
   [chart.data addObject:[NSArray arrayWithObjects:@"1", @"2", @"10", @"100", @"400", nil]];
   [chart.labels addObject:@"My data"];
@@ -149,7 +149,7 @@
   chart.legend.labels = [NSArray arrayWithObject:@"Data"];
   [chart.colors addObject:@"00ff000f"];
   
-  STAssertEqualObjects(@"http://chart.apis.google.com/chart?cht=lc&chs=480x320&chd=t:1,2,10,100,400&chds=0,420&chl=My data&chxt=x,y&chxl=0:|3/1|3/8|3/15|3/22|3/29&chxr=1,0,420&chdl=Data&chdlp=tv&chco=00ff000f",
+  STAssertEqualObjects(@"http://chart.apis.google.com/chart?cht=lc&chs=320x480&chd=t:1,2,10,100,400&chds=0,420&chl=My data&chxt=x,y&chxl=0:|3/1|3/8|3/15|3/22|3/29&chxr=1,0,420&chdl=Data&chdlp=tv&chco=00ff000f",
                        [chart url], nil);
 }
 

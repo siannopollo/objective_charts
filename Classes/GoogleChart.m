@@ -3,7 +3,6 @@
 //  workout
 //
 //  Created by steve on 6/19/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
 #import "GoogleChart.h"
@@ -15,6 +14,7 @@
 @synthesize apiUrl, width, height, type, data, dataEncoding, scaleFactor, labels,
             xAxis, yAxis, topAxis, rightAxis, legend, colors;
 
+//  Implements the extended encoding scheme for the API
 + (NSString *)extendedEncodingFor:(int)value {
   if (value < 0 || value > 4095) return @"";
   
@@ -25,6 +25,7 @@
   return [NSString stringWithFormat:@"%C%C", firstCharacter, secondCharacter];
 }
 
+//  Plain text encoding, which just passes values through as their string versions
 + (NSString *)textEncodingFor:(int)value {
   if (value < 0) return @"";
   return [NSString stringWithFormat:@"%d", value];
@@ -50,11 +51,14 @@
   return self;
 }
 
+//  Formatted string of <width>x<height>
 - (NSString *)size {
   if (width == 0 || height == 0) return @"";
   return [NSString stringWithFormat:@"%dx%d", width, height];
 }
 
+//  Returns the encoded chart type for the chart url. Based off of the 'type' property.
+//  If 'type' is not set or something not in the below dictionary, this returns an empty string.
 - (NSString *)chartType {
   id value = [[NSDictionary dictionaryWithObjectsAndKeys:
                @"", @"",
@@ -73,6 +77,11 @@
   return value;
 }
 
+//  Formats the items in the 'data' property for the data parameter in the chart url (chd).
+//  This assumes that the 'data' property has one or more arrays in it, like so:
+//    [[data set 1], [data set 2]]
+//
+//  This also runs each item in each data set through the encoding set in the 'encoding' property.
 - (NSString *)formattedData {
   NSString *result = [NSString stringWithFormat:@"%C:", [dataEncoding characterAtIndex:0]];
   NSArray *dataSet; NSMutableArray *dataSetStrings, *dataSetString; NSInvocation *invocation;
@@ -99,16 +108,22 @@
   return result;
 }
 
+//  Returns the scaling parameter for the chart url (chds) based on the maximum value in the 'data' property
+//  multiplied by the 'scalingFactor' property. If 'scalingFactor' is set to 0, this returns an empty string.
 - (NSString *)scaling {
   if ([data count] == 0 || scaleFactor == 0.0) return @"";
   return [NSString stringWithFormat:@"0,%.0f", [self maxDataValue]*scaleFactor];
 }
 
+//  Returns the label parameter for the chart url (chl) based on the 'labels' property.
+//  Note: The 'chl' parameter seems to take precedence over any labels set for the 'xAxis' object.
 - (NSString *)dataLabels {
   if ([labels count] == 0) return @"";
   return [labels componentsJoinedByString:@"|"];
 }
 
+//  Spins through all four possible axes (x, y, top, right) and collects which axes should be shown and
+//  any labels and ranges that may have been set for them.
 - (NSString *)axisData {
   if ([data count] == 0) return @"";
   
@@ -141,11 +156,15 @@
   return result;
 }
 
+//  Returns the colors parameter for the chart url (chco) based on the 'colors' property.
+//  According to Google, colors should be 6 character strings in hexadecimal format (RRGGBB) or
+//  8 character strings with RGB values and transparency values (RRGGBBTT)
 - (NSString *)formattedColors {
   if ([colors count] == 0) return @"";
   return [colors componentsJoinedByString:@","];
 }
 
+//  Returns the maximum value present in the 'data' property.
 - (int)maxDataValue {
   if ([data count] == 0) return 0;
   
@@ -159,6 +178,7 @@
   return [[sorted objectAtIndex:[sorted count] - 1] intValue];
 }
 
+//  Returns the value calculated for a given parameter in the chart url
 - (NSString *)valueForUrlParameter:(NSString *)parameter {
   NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
   [dictionary setObject:[self chartType] forKey:@"cht"];
@@ -173,6 +193,7 @@
   return [dictionary objectForKey:parameter];
 }
 
+//  Returns the fully formatted url for creating a Google chart
 - (NSString *)url {
   NSString *parameter, *value;
   NSArray *parameters = [NSArray arrayWithObjects:

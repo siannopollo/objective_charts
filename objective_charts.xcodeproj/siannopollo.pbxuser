@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {895, 411}}";
+			sepNavSelRange = "{337, 0}";
+			sepNavVisRange = "{0, 344}";
+		};
+	};
+	1D3623250D0F684500981E51 /* objective_chartsAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {895, 456}}";
+			sepNavSelRange = "{197, 0}";
+			sepNavVisRange = "{37, 368}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* objective_charts */ = {
+		activeExec = 0;
+		executables = (
+			B88B46950FF1600200E82996 /* objective_charts */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = B88B46D20FF161D500E82996 /* Test */;
+		activeTarget = B88B46D00FF161D500E82996 /* Test */;
+		addToTargets = (
+			B88B46D00FF161D500E82996 /* Test */,
+			1D6058900D05DD3D006BFB54 /* objective_charts */,
+		);
+		codeSenseManager = B88B469D0FF1602100E82996 /* Code sense */;
+		executables = (
+			B88B46950FF1600200E82996 /* objective_charts */,
+			B88B46D20FF161D500E82996 /* Test */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					717,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					677,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 267476994;
+			PBXWorkspaceStateSaveDate = 267476994;
+		};
+		perUserProjectItems = {
+			B88B46BF0FF1619A00E82996 /* PlistBookmark */ = B88B46BF0FF1619A00E82996 /* PlistBookmark */;
+			B88B46C00FF1619A00E82996 /* PBXTextBookmark */ = B88B46C00FF1619A00E82996 /* PBXTextBookmark */;
+			B88B46C10FF1619A00E82996 /* PBXTextBookmark */ = B88B46C10FF1619A00E82996 /* PBXTextBookmark */;
+			B88B46C20FF1619A00E82996 /* PlistBookmark */ = B88B46C20FF1619A00E82996 /* PlistBookmark */;
+			B88B46C30FF1619A00E82996 /* PBXTextBookmark */ = B88B46C30FF1619A00E82996 /* PBXTextBookmark */;
+			B88B46C40FF1619A00E82996 /* PBXTextBookmark */ = B88B46C40FF1619A00E82996 /* PBXTextBookmark */;
+			B88B46C50FF1619A00E82996 /* PBXTextBookmark */ = B88B46C50FF1619A00E82996 /* PBXTextBookmark */;
+			B88B46C60FF1619A00E82996 /* PBXTextBookmark */ = B88B46C60FF1619A00E82996 /* PBXTextBookmark */;
+			B88B46C70FF1619A00E82996 /* PBXTextBookmark */ = B88B46C70FF1619A00E82996 /* PBXTextBookmark */;
+			B88B46C80FF1619A00E82996 /* PBXTextBookmark */ = B88B46C80FF1619A00E82996 /* PBXTextBookmark */;
+			B88B46C90FF1619A00E82996 /* PBXTextBookmark */ = B88B46C90FF1619A00E82996 /* PBXTextBookmark */;
+			B88B46D90FF161FD00E82996 /* PBXTextBookmark */ = B88B46D90FF161FD00E82996 /* PBXTextBookmark */;
+			B88B46DA0FF1621300E82996 /* PBXTextBookmark */ = B88B46DA0FF1621300E82996 /* PBXTextBookmark */;
+			B88B46DD0FF1623900E82996 /* PBXTextBookmark */ = B88B46DD0FF1623900E82996 /* PBXTextBookmark */;
+			B88B46DF0FF1624D00E82996 /* PBXTextBookmark */ = B88B46DF0FF1624D00E82996 /* PBXTextBookmark */;
+		};
+		sourceControlManager = B88B469C0FF1602100E82996 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	B88B46950FF1600200E82996 /* objective_charts */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = objective_charts;
+		sourceDirectories = (
+		);
+	};
+	B88B469C0FF1602100E82996 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	B88B469D0FF1602100E82996 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	B88B46BF0FF1619A00E82996 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* objective_charts-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			NSMainNibFile,
+		);
+		name = "/Users/siannopollo/Developer/Projects/OpenSource/objective_charts/objective_charts-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	B88B46C00FF1619A00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* objective_chartsAppDelegate.m */;
+		name = "objective_chartsAppDelegate.m: 10";
+		rLen = 0;
+		rLoc = 197;
+		rType = 0;
+		vrLen = 368;
+		vrLoc = 37;
+	};
+	B88B46C10FF1619A00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
+		name = "objective_chartsAppDelegate.h: 15";
+		rLen = 0;
+		rLoc = 337;
+		rType = 0;
+		vrLen = 344;
+		vrLoc = 0;
+	};
+	B88B46C20FF1619A00E82996 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* objective_charts-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			NSMainNibFile,
+		);
+		name = "/Users/siannopollo/Developer/Projects/OpenSource/objective_charts/objective_charts-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	B88B46C30FF1619A00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
+		name = "objective_chartsAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 526;
+		vrLoc = 0;
+	};
+	B88B46C40FF1619A00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* objective_chartsAppDelegate.m */;
+		name = "objective_chartsAppDelegate.m: 19";
+		rLen = 0;
+		rLoc = 337;
+		rType = 0;
+		vrLen = 445;
+		vrLoc = 61;
+	};
+	B88B46C50FF1619A00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
+		name = "objective_chartsAppDelegate.h: 10";
+		rLen = 0;
+		rLoc = 181;
+		rType = 0;
+		vrLen = 347;
+		vrLoc = 0;
+	};
+	B88B46C60FF1619A00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* objective_chartsAppDelegate.m */;
+		name = "objective_chartsAppDelegate.m: 22";
+		rLen = 39;
+		rLoc = 359;
+		rType = 0;
+		vrLen = 385;
+		vrLoc = 61;
+	};
+	B88B46C70FF1619A00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
+		name = "objective_chartsAppDelegate.h: 15";
+		rLen = 0;
+		rLoc = 337;
+		rType = 0;
+		vrLen = 344;
+		vrLoc = 0;
+	};
+	B88B46C80FF1619A00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* objective_chartsAppDelegate.m */;
+		name = "objective_chartsAppDelegate.m: 10";
+		rLen = 0;
+		rLoc = 197;
+		rType = 0;
+		vrLen = 368;
+		vrLoc = 37;
+	};
+	B88B46C90FF1619A00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
+		name = "objective_chartsAppDelegate.h: 15";
+		rLen = 0;
+		rLoc = 337;
+		rType = 0;
+		vrLen = 344;
+		vrLoc = 0;
+	};
+	B88B46D00FF161D500E82996 /* Test */ = {
+		activeExec = 0;
+		executables = (
+			B88B46D20FF161D500E82996 /* Test */,
+		);
+	};
+	B88B46D20FF161D500E82996 /* Test */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Test;
+		sourceDirectories = (
+		);
+	};
+	B88B46D90FF161FD00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
+		name = "objective_chartsAppDelegate.h: 15";
+		rLen = 0;
+		rLoc = 337;
+		rType = 0;
+		vrLen = 344;
+		vrLoc = 0;
+	};
+	B88B46DA0FF1621300E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
+		name = "objective_chartsAppDelegate.h: 15";
+		rLen = 0;
+		rLoc = 337;
+		rType = 0;
+		vrLen = 344;
+		vrLoc = 0;
+	};
+	B88B46DD0FF1623900E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
+		name = "objective_chartsAppDelegate.h: 15";
+		rLen = 0;
+		rLoc = 337;
+		rType = 0;
+		vrLen = 344;
+		vrLoc = 0;
+	};
+	B88B46DF0FF1624D00E82996 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* objective_chartsAppDelegate.h */;
+		name = "objective_chartsAppDelegate.h: 15";
+		rLen = 0;
+		rLoc = 337;
+		rType = 0;
+		vrLen = 344;
+		vrLoc = 0;
+	};
+}

@@ -9,10 +9,10 @@
 
 @interface GoogleChartLegend : NSObject {
   NSString *position;
-  NSArray *labels;
+  NSMutableArray *labels;
 }
 @property (nonatomic, retain) NSString *position;
-@property (nonatomic, retain) NSArray *labels;
+@property (nonatomic, retain) NSMutableArray *labels;
 
 - (NSString *)formattedData;
 @end

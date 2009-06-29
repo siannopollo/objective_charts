@@ -95,12 +95,16 @@
   for (dataSet in data) {
     dataSetString = [[NSMutableArray alloc] init];
     for (id item in dataSet) {
-      invocation = [NSInvocation invocationWithMethodSignature:[[self class] methodSignatureForSelector:selector]];
-      [invocation setSelector:selector];
-      int arg = [item intValue];
-      [invocation setArgument:&arg atIndex:2];
-      [invocation invokeWithTarget:[self class]];
-      NSString *value; [invocation getReturnValue:&value];
+      NSString *value;
+      if ([item isKindOfClass:[NSString class]]) value = item;
+      else {
+        invocation = [NSInvocation invocationWithMethodSignature:[[self class] methodSignatureForSelector:selector]];
+        [invocation setSelector:selector];
+        int arg = [item intValue];
+        [invocation setArgument:&arg atIndex:2];
+        [invocation invokeWithTarget:[self class]];
+        [invocation getReturnValue:&value];
+      }
       if ([value length] > 0) [dataSetString addObject:value];
       [value release];
     }

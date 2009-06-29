@@ -72,6 +72,10 @@
                          [NSNumber numberWithInt:32], nil]];
   STAssertEqualObjects(@"http://chart.apis.google.com/chart?chd=t:1,2,10,100,400|99,32",
                        [chart url], nil);
+  
+  [chart.data addObject:[NSArray arrayWithObjects:@"2.3", @"5.7", nil]];
+  STAssertEqualObjects(@"http://chart.apis.google.com/chart?chd=t:1,2,10,100,400|99,32|2.3,5.7",
+                       [chart url], nil);
 }
 
 // Defaults to 5% greater than largest data value

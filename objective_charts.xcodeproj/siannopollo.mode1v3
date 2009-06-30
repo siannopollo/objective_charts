@@ -276,8 +276,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>1</integer>
+									<integer>7</integer>
+									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -331,28 +331,18 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>B81830560FF9606300A77571</string>
+										<string>B84D7DB10FFA6EF3001D9ED1</string>
 										<key>history</key>
 										<array>
 											<string>B88B46BF0FF1619A00E82996</string>
 											<string>B88B47600FF1CFAC00E82996</string>
-											<string>B88B47610FF1CFAC00E82996</string>
 											<string>B88B47630FF1CFAC00E82996</string>
 											<string>B88B47640FF1CFAC00E82996</string>
 											<string>B88B47650FF1CFAC00E82996</string>
 											<string>B88B47660FF1CFAC00E82996</string>
-											<string>B88B47670FF1CFAC00E82996</string>
-											<string>B88B47680FF1CFAC00E82996</string>
-											<string>B818304E0FF9606300A77571</string>
 											<string>B818304F0FF9606300A77571</string>
-											<string>B81830500FF9606300A77571</string>
-											<string>B81830510FF9606300A77571</string>
-										</array>
-										<key>nextStack</key>
-										<array>
-											<string>B81830530FF9606300A77571</string>
-											<string>B81830540FF9606300A77571</string>
-											<string>B81830550FF9606300A77571</string>
+											<string>B84D7DA40FFA6E6F001D9ED1</string>
+											<string>B84D7DA50FFA6E6F001D9ED1</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -366,7 +356,7 @@
 											<string>B88B47760FF1CFAC00E82996</string>
 											<string>B88B47790FF1CFAC00E82996</string>
 											<string>B88B47880FF1CFAC00E82996</string>
-											<string>B81830520FF9606300A77571</string>
+											<string>B84D7DA60FFA6E6F001D9ED1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -424,9 +414,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>B81830570FF9606300A77571</string>
+				<string>B84D7DA80FFA6E6F001D9ED1</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>B81830580FF9606300A77571</string>
+				<string>B84D7DA90FFA6E6F001D9ED1</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -602,8 +592,6 @@
 							<string>230pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -643,7 +631,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>B88B46BA0FF1614300E82996</string>
-				<string>B818304C0FF95FA500A77571</string>
+				<string>B84D7DAA0FFA6E6F001D9ED1</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

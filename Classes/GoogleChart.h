@@ -27,6 +27,7 @@
   GoogleChartAxis *rightAxis;
   GoogleChartLegend *legend;
   NSMutableArray *colors;
+  NSMutableArray *lineStyles;
 }
 
 @property (nonatomic, readonly, assign) NSString *apiUrl;
@@ -43,20 +44,22 @@
 @property (nonatomic, assign) GoogleChartAxis *rightAxis;
 @property (nonatomic, assign) GoogleChartLegend *legend;
 @property (nonatomic, assign) NSMutableArray *colors;
+@property (nonatomic, assign) NSMutableArray *lineStyles;
 
 + (NSString *)extendedEncodingFor:(int)value;
 + (NSString *)textEncodingFor:(int)value;
 - (NSString *)size;
 - (NSString *)url;
-- (NSString *)chartType;
 - (NSString *)scaling;
-- (NSString *)dataLabels;
-- (NSString *)axisData;
-- (NSString *)formattedColors;
 - (int)maxDataValue;
 @end
 
 @interface GoogleChart (hidden)
-- (NSString *)valueForUrlParameter:(NSString *)parameter;
+- (NSString *)axisData;
+- (NSString *)chartType;
+- (NSString *)dataLabels;
 - (NSString *)formattedData;
+- (NSString *)formattedColors;
+- (NSString *)formattedLineStyles;
+- (NSString *)valueForUrlParameter:(NSString *)parameter;
 @end

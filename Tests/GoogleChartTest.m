@@ -141,6 +141,11 @@
   STAssertEqualObjects(@"http://chart.apis.google.com/chart?chco=ff0000,00ff00,0000ff", [chart url], nil);
 }
 
+- (void)testLineStyles {
+  [chart.lineStyles addObjectsFromArray:[NSArray arrayWithObjects:@"3,6,3", @"1,1,0", nil]];
+  STAssertEqualObjects(@"http://chart.apis.google.com/chart?chls=3,6,3|1,1,0", [chart url], nil);
+}
+
 - (void)testAllSupportedParameters {
   chart.width = 320;
   chart.height = 480;
@@ -151,8 +156,9 @@
   [chart.yAxis.range setRange:1 min:0 max:[chart maxDataValue]*chart.scaleFactor+1];
   chart.legend.labels = [NSArray arrayWithObject:@"Data"];
   [chart.colors addObject:@"00ff000f"];
+  [chart.lineStyles addObject:@"3,6,3"];
   
-  STAssertEqualObjects(@"http://chart.apis.google.com/chart?cht=lc&chs=320x480&chd=t:1,2,10,100,400&chds=0,420&chl=My data&chxt=x,y&chxl=0:|3/1|3/8|3/15|3/22|3/29&chxr=1,0,420&chdl=Data&chdlp=tv&chco=00ff000f",
+  STAssertEqualObjects(@"http://chart.apis.google.com/chart?cht=lc&chs=320x480&chd=t:1,2,10,100,400&chds=0,420&chl=My data&chxt=x,y&chxl=0:|3/1|3/8|3/15|3/22|3/29&chxr=1,0,420&chdl=Data&chdlp=tv&chco=00ff000f&chls=3,6,3",
                        [chart url], nil);
 }
 

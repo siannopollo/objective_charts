@@ -12,7 +12,7 @@
 @implementation GoogleChart
 
 @synthesize apiUrl, width, height, type, data, dataEncoding, scaleFactor, labels,
-            xAxis, yAxis, topAxis, rightAxis, legend, colors;
+            xAxis, yAxis, topAxis, rightAxis, legend, colors, lineStyles;
 
 //  Implements the extended encoding scheme for the API
 + (NSString *)extendedEncodingFor:(int)value {
@@ -49,6 +49,7 @@
     self.legend = [[GoogleChartLegend alloc] init];
     
     self.colors = [[NSMutableArray alloc] init];
+    self.lineStyles = [[NSMutableArray alloc] init];
   }
   return self;
 }
@@ -174,6 +175,17 @@
   return [colors componentsJoinedByString:@","];
 }
 
+//  Returns line styles parameter for the chart url (chls) based on the 'lineStyles' property.
+//  Styles are in the format of:
+//    <line thickness>,<length of line segment>,<length of blank segment>
+//  
+//  Styles are applied to data sets in order, so the first style applies to the first dataset,
+//  the second style to the second dataset, and so on.
+- (NSString *)formattedLineStyles {
+  if ([lineStyles count] == 0) return @"";
+  return [lineStyles componentsJoinedByString:@"|"];
+}
+
 //  Returns the maximum value present in the 'data' property.
 - (int)maxDataValue {
   if ([data count] == 0) return 0;
@@ -200,6 +212,7 @@
   [dictionary setObject:[self axisData] forKey:@"chxt"];
   [dictionary setObject:[legend formattedData] forKey:@"chdl"];
   [dictionary setObject:[self formattedColors] forKey:@"chco"];
+  [dictionary setObject:[self formattedLineStyles] forKey:@"chls"];
   
   return [dictionary objectForKey:parameter];
 }
@@ -208,7 +221,7 @@
 - (NSString *)url {
   NSString *parameter, *value;
   NSArray *parameters = [NSArray arrayWithObjects:
-                         @"cht", @"chs", @"chd", @"chds", @"chl", @"chxt", @"chdl", @"chco", nil];
+                         @"cht", @"chs", @"chd", @"chds", @"chl", @"chxt", @"chdl", @"chco", @"chls", nil];
   NSMutableArray *urlParameters = [[NSMutableArray alloc] init];
   
   for (parameter in parameters) {
@@ -224,7 +237,6 @@
 }
 
 - (void)dealloc {
-  [super dealloc];
   [apiUrl release];
   [type release];
   [data release];
@@ -235,5 +247,8 @@
   [topAxis release];
   [rightAxis release];
   [legend release];
+  [colors release];
+  [lineStyles release];
+  [super dealloc];
 }
 @end

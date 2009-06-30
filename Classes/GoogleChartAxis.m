@@ -32,10 +32,10 @@
 }
 
 - (void)dealloc {
-  [super dealloc];
   [type release];
   [labels release];
   [range release];
+  [super dealloc];
 }
 @end
 

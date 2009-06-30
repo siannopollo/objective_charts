@@ -45,8 +45,8 @@
 }
 
 - (void)dealloc {
-  [super dealloc];
   [position release];
   [labels release];
+  [super dealloc];
 }
 @end
